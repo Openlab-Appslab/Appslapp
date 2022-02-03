@@ -1,0 +1,32 @@
+<mat-card class="registration-card">
+    <mat-card-header>
+      <mat-card-title style="text-align: center;">Register</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form class="example-form">
+        <table class="example-full-width" cellspacing="0">
+            <tr class="email">
+            <td>
+              <mat-form-field class="example-full-width">
+              <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
+              </mat-form-field>
+            </td>
+          <tr>
+            <td>
+              <mat-form-field class="example-full-width">
+              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
+              </mat-form-field>
+            </td>
+          </tr>
+          <tr>
+          <td><mat-form-field class="example-full-width">
+            <input matInput color="primary" placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
+          </mat-form-field></td>
+        </tr></table>
+      </form>
+     
+    </mat-card-content>
+    <mat-card-actions class="button-parrent">
+      <button mat-raised-button class="button"  color="accent">Login</button>
+    </mat-card-actions>
+  </mat-card>
