@@ -1,23 +1,31 @@
-.registration-card {
-    width: 300px;
-    height: 500px;
+
+
+.flex-container {
+    display: flex;
+
+}
+
+.flex-child {
+    flex: 1;
+    
+    margin-top: 0px;
+    margin: 150px;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
+
+.card-title {
     text-align: center;
-    position: relative;
+}
+
+.registration-card {
+    width: 200px;
+    text-align: center;
 }
 
 .example-full-width {
-    width: 290px;
+    
     font-size: large;
-}
-
-.button-parrent{
-    width: auto;
-    height: 100px;
-    text-align: center;
-    position: relative;
-}
-
-.button {
-    position: relative;
-    margin-top: 100px;
 }

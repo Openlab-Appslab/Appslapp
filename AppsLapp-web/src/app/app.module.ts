@@ -17,12 +17,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { FormsModule } from '@angular/forms';
+import { MatIconModule } from '@angular/material/icon';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
-    
   ],
   imports: [
     BrowserModule,
@@ -36,7 +37,8 @@ import { FormsModule } from '@angular/forms';
     MatToolbarModule,
     MatMenuModule,
     MatProgressSpinnerModule,
-    FormsModule
+    FormsModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
