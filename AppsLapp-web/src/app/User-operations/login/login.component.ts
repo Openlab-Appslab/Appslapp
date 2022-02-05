@@ -4,23 +4,21 @@ import { SignUpService } from '../user.service';
 
 
 @Component({
-  selector: 'app-registration',
-  templateUrl: './registration.component.html',
-  styleUrls: ['./registration.component.css']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.css']
 })
-export class RegistrationComponent implements OnInit {
-  
+export class LoginComponent implements OnInit {
+
   constructor(private userService: SignUpService) { }
 
   ngOnInit(): void {
   }
 
-  comfirmPassword: string;
-
   model = new User('', '', '');
 
-  signUp(): void {
-    this.userService.createUser(this.model);
+  login(): void {
+    this.userService.loginUser(this.model);
     console.log(this.model);
   }
 
