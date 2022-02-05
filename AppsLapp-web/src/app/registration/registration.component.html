@@ -1,41 +1,39 @@
 <div class="flex-container">
 <div class="flex-child text">
   <p style="font-size:xx-large;">Welcome in AppsLapp!</p>
+  <p>Learn new skills with freedom.</p>
   <img style="width: 60%;" src="https://brandlogos.net/wp-content/uploads/2022/01/siemens_healthineers-brandlogo.net_.png" alt="">
 </div>
 
 <div class="flex-child card">
   
-<mat-card class="registration-card">
-    
-    <mat-card-content>
-      <form class="example-form">
-        <table class="example-full-width" cellspacing="0">
-            <tr class="email">
-            <td>
-              <mat-form-field class="example-full-width">
-              <input matInput placeholder="Email" [(ngModel)]="email" name="email" required>
-              </mat-form-field>
-            </td>
-          <tr>
-            <td>
-              <mat-form-field class="example-full-width">
-              <input matInput placeholder="Username" [(ngModel)]="username" name="username" required>
-              </mat-form-field>
-            </td>
-          </tr>
-          <tr>
-          <td><mat-form-field class="example-full-width">
-            <input matInput color="primary" placeholder="Password" [(ngModel)]="password"type="password" name="password" required>
-          </mat-form-field></td>
-        </tr></table>
-      </form>
-     
-    </mat-card-content>
-    <mat-card-actions class="button">
-      <button mat-raised-button class="button"  color="accent">Sign up</button>
-    </mat-card-actions>
-    <span style="font-size: x-small;">Already have account? Login</span><a style="font-size: x-small;" href=""> here</a>
-  </mat-card>
-  </div>
+  <body>
+    <div class="signup-form">
+        <form action="/examples/actions/confirmation.php" method="post">
+        <h2>Sign Up</h2>
+        <p>Please fill in this form to create an account!</p>
+        <hr>
+            <div class="form-group">
+          <label>Username</label>
+              <input type="text" class="form-control" name="username" required="required">
+            </div>
+            <div class="form-group">
+          <label>Email Address</label>
+              <input type="email" class="form-control" name="email" required="required">
+            </div>
+        <div class="form-group">
+          <label>Password</label>
+                <input type="password" class="form-control" name="password" required="required">
+            </div>
+        <div class="form-group">
+          <label>Confirm Password</label>
+                <input type="password" class="form-control" name="confirm_password" required="required">
+            </div>        
+        <div class="form-group">
+                <button color="primary" type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+            </div>
+        </form>
+      <div class="text-center">Already have an account? <a href="#">Login here</a></div>
+    </div>
+    </body>  </div>
 </div>
