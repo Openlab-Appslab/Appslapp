@@ -7,6 +7,7 @@ export class SignUpService {
 
   constructor() { }
 
+  headers = new Headers();
 
   createUser(user: User){
     fetch('https://apps-lapp-server.herokuapp.com/api/auth/register', {
@@ -25,6 +26,18 @@ export class SignUpService {
     });
   }
 
+  loginUser(user: User){
+    let authString = `${user.username}:${user.password}`
+
+    this.headers.set('Authorization', 'Basic ' + btoa(authString))
+
+    fetch('https://apps-lapp-server.herokuapp.com/api/auth/login', {
+      method: 'GET',
+      headers: this.headers})
+    .then(response => response.json())
+    .then(data => console.log(data));
+  }
+
   getUser(){
     fetch('https://jsonplaceholder.typicode.com/todos/205', {
       method: 'GET',
@@ -32,18 +45,6 @@ export class SignUpService {
         'Content-type': 'application/json; charset=UTF-8',
         
       }
-    })
-    .then(response => response.json())
-    .then(data => console.log(data));
-  }
-
-  loginUser(user: User){
-    fetch('https://apps-lapp-server.herokuapp.com/api/auth/login', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({username: user.username, password: user.password})
     })
     .then(response => response.json())
     .then(data => console.log(data));
