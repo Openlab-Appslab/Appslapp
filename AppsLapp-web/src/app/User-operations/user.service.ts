@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { User } from './user';
+
 
 
 @Injectable({ providedIn: 'root' })
 export class SignUpService {
 
-  constructor() { }
+  constructor(private cookieService: CookieService) { }
 
   headers = new Headers();
 
@@ -35,7 +37,13 @@ export class SignUpService {
       method: 'GET',
       headers: this.headers})
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+      this.cookieService.set('username', user.username);
+      this.cookieService.set('password', user.password);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 
   getUser(){

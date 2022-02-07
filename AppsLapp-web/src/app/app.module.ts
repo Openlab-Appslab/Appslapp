@@ -22,7 +22,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import {MatSidenavModule} from '@angular/material/sidenav';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +45,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
     MatIconModule,
     HttpClientModule,
     MatSidenavModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
