@@ -294,7 +294,7 @@
 </style>
 
 <mat-toolbar class="toolbar" color="primary">
-  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" (click)="drawer.toggle()">
    <mat-icon>menu</mat-icon>
  </button>
  <img style="width: 10%;" src="https://openlab.sk/themes/demo/assets/images/logo.png" alt="openlab-logo">
@@ -307,7 +307,18 @@
 </button>
 </mat-toolbar>
 
-
+<mat-drawer-container class="example-container" autosize>
+    <mat-drawer #drawer class="example-sidenav" mode="side">
+      <p>Auto-resizing sidenav</p>
+      <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
+      <button [routerLink]="['/dashboard']"  mat-raised-button>
+        Toggle extra text
+      </button>
+    </mat-drawer>
+  
+    
+  
+  </mat-drawer-container>
 
 
   
