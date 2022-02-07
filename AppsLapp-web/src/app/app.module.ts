@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './User-operations/login/login.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import {MatSidenavModule} from '@angular/material/sidenav';
 
 
 @NgModule({
@@ -25,6 +27,7 @@ import { LoginComponent } from './User-operations/login/login.component';
     AppComponent,
     RegistrationComponent,
     LoginComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +43,9 @@ import { LoginComponent } from './User-operations/login/login.component';
     MatProgressSpinnerModule,
     FormsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSidenavModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

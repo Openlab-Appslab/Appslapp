@@ -15,7 +15,7 @@ export class RegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  comfirmPassword: string;
+  comfirmPassword: any;
 
   model = new User('', '', '');
 
