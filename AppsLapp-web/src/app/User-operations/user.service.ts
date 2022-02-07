@@ -14,17 +14,23 @@ export class SignUpService {
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify(user)
+      body: JSON.stringify(user),
     })
     .then(response => response.json())
-    .then(data => console.log(data));
+    .then(data => {
+      console.log('Success:', data);
+    })
+    .catch((error) => {
+      console.error('Error:', error);
+    });
   }
 
   getUser(){
     fetch('https://jsonplaceholder.typicode.com/todos/205', {
       method: 'GET',
       headers: {
-        'Content-Type': 'application/json',
+        'Content-type': 'application/json; charset=UTF-8',
+        
       }
     })
     .then(response => response.json())
@@ -32,7 +38,7 @@ export class SignUpService {
   }
 
   loginUser(user: User){
-    fetch('https://jsonplaceholder.typicode.com/todos/205', {
+    fetch('https://apps-lapp-server.herokuapp.com/api/auth/login', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

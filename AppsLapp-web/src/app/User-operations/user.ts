@@ -1,23 +1,14 @@
 export class User {
     id: number;
-    username: string;
-    email: string;
-    password: string;
+    username: any;
+    email: any;
+    password: any;
     authority: any;
 
     constructor(
-        email: string,
-        username: string,
-        password: string,
+        username: any,
+        password: any,
+        email: any,
     ) { }
 }
 
-export class UserLogin {
-    username: string;
-    password: string;
-
-    constructor(
-        username: string,
-        password: string,
-    ) { }
-}
