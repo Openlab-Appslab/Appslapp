@@ -21,7 +21,6 @@ export class RegistrationComponent implements OnInit {
 
   signUp(): void {
     this.userService.createUser(this.model);
-    console.log(this.model);
   }
 
 }

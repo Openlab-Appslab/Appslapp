@@ -20,7 +20,7 @@
                 <input [(ngModel)]="model.password" type="password" class="form-control" name="password" placeholder="Password" required="required">
             </div>        
             <div class="form-group">
-                <button type="submit" class="btn btn-primary btn-lg btn-block" (click)="login()" [disabled]="!logInForm.form.valid" [routerLink]="['/dashboard']">Sign in</button>
+                <button color="primary" type="button" class="btn btn-primary btn-lg" (click)="login()" [disabled]="!logInForm.form.valid" [routerLink]="['/dashboard']">Sign in</button>
             </div>
             <p><a href="#">Lost your Password?</a></p>
         </form>

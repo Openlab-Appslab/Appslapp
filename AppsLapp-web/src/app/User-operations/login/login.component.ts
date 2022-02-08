@@ -26,9 +26,7 @@ export class LoginComponent implements OnInit {
   
 
   login(): void {
-    this.userService.loginUser(this.model);
-    console.log(this.model);
-    
+    this.userService.loginUser(this.model);    
   }
 
 }
